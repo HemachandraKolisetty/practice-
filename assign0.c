@@ -3,19 +3,13 @@
 int find_subarray(int A[],int n,int t)
 {
 	int i,j=1,k;
-	for(i=1;i<=n;i++)
-	{	
-		if(t>0)
-		{
-			t-=A[i];
-		}
-		if(t<0)
-		{
+	for(i=1;i<=n;i++){	
+		if(t>0)	t-=A[i];
+		if(t<0){
 			t+=A[j];
 			j++;
 		}
-		if(t==0)
-		{
+		if(t==0){
 			printf("Subarray found \n");
 			for(k=j;k<=i;k++)
 			printf("%d ",A[k]);

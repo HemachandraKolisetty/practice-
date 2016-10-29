@@ -7,9 +7,7 @@ bool findPair(int a[],int n,int x){
 	int temp;
 	for(int i=0;i<n;i++){
 		temp = x-a[i];
-		if(temp>=0) {
-			if(binMap[temp]==1) return true;
-		}
+		if(temp>=0) if(binMap[temp]==1) return true;
 		binMap[a[i]]=1;
 	}
 	return false;
